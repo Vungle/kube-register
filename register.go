@@ -34,7 +34,7 @@ func register(endpoint, addr string) error {
 		return err
 	}
 	defer res.Body.Close()
-	if res.StatusCode == 202 || res.StatusCode == 200 {
+	if res.StatusCode == 202 || res.StatusCode == 201 || res.StatusCode == 200 {
 		log.Printf("registered machine: %s\n", addr)
 		return nil
 	}
