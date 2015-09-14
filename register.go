@@ -40,7 +40,7 @@ func register(endpoint, addr string) error {
 		return err
 	}
 
-	url := fmt.Sprintf("%s/api/v1beta3/nodes", endpoint)
+	url := fmt.Sprintf("%s/api/v1/nodes", endpoint)
 
 	res, err := http.Post(url, "application/json", bytes.NewReader(data))
 	if err != nil {
