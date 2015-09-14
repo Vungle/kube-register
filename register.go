@@ -31,7 +31,7 @@ type NodeResp struct {
 func register(endpoint, addr string) error {
 	var n Node
 	n.Kind = "Node"
-	n.APIVersion = "v1beta3"
+	n.APIVersion = "v1"
 	n.Metadata.Name = addr
 	n.Spec.ExternalID = addr
 
